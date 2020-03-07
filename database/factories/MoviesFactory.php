@@ -9,7 +9,7 @@ $factory->define(\App\Models\Movies::class, function (Faker $faker) {
     return [
         //
         'title'=>$faker->title,
-        'director'=>$faker->numberBetween(30,222),
+        'director'=>$faker->numberBetween(1,50),
 
 
     ];

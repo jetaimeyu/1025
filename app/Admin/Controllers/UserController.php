@@ -15,7 +15,8 @@ class UserController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\User';
+//    protected $title = 'App\User';
+    protected $title = '用户管理';
 
     /**
      * Make a grid builder.
@@ -26,7 +27,7 @@ class UserController extends AdminController
     {
         $grid = new Grid(new User());
 
-        $grid->column('id', __('Id'));
+        $grid->column('id', __('Id'))->sortable(    );
         $grid->column('name', __('Name'));
         $grid->column('email', __('Email'));
         $grid->column('email_verified_at', __('Email verified at'));

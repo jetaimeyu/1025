@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
 //        $this->call(AdminTablesSeeder::class);
         $this->call(AdminMenuTableSeeder::class);
         $this->call(MovieSeeder::class);
+        $this->call(UserSeeder::class);
+        $this->call(PostTableSeeder::class);
     }
 }
