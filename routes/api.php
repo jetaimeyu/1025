@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Router;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,9 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+Route::middleware('throttle:60,1')->prefix('v1')->group(function (){
+   Route::get('/articles','Api\PostController@index');
+   Route::get('article/{id}', 'Api\PostController@detail')->where(['id'=>'[1-9]{1}[0-9]*']);
+
 });
