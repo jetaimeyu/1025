@@ -1,21 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html font-size="10px">
 <head>
-    <title>@yield('title', 'weibo app') - laravel入门</title>
-    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <title>@yield('title', 'Weibo App') - Laravel 入门教程</title>
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="/">weibo</a>
-        <ui class="navbar-nav justify-content-end">
-            <li class="nav-item"><a href="/help">帮助</a></li>
-            <li class="nav-item"><a href="/login">登录</a></li>
-        </ui>
-    </div>
-</nav>
+@include('layouts._header')
 
 <div class="container">
-    @yield('content')
+    <div class="offset-md-1 col-md-10">
+        @include('shared._messages')
+        @yield('content')
+        @include('layouts._footer')
+    </div>
+
 </div>
+
+
 </body>
 </html>

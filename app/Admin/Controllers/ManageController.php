@@ -3,7 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Models\User;
 use Encore\Admin\Layout\Content;
 use Illuminate\Http\Request;
 
