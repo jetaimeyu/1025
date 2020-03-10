@@ -9,7 +9,8 @@ class StaticPageController extends Controller
     //
     public function index()
     {
-        return view('static_pages.home');
+        $time = time();
+        return view('static_pages.home', compact('time'));
     }
 
     public function help()

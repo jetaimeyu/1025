@@ -176,7 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Emadadly\LaravelUuid\LaravelUuidServiceProvider::class
+        Emadadly\LaravelUuid\LaravelUuidServiceProvider::class,
+        App\Providers\BladeExtendsServiceProvider::class
 
     ],
 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class UserSeeder extends Seeder
 {
@@ -12,6 +13,9 @@ class UserSeeder extends Seeder
     public function run()
     {
         //
-        factory(\App\Models\User::class, 80)->create();
+        factory(User::class, 80)->create();
+        $user = User::find(166);
+        $user->is_admin = true;
+        $user->save();
     }
 }
