@@ -177,8 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Emadadly\LaravelUuid\LaravelUuidServiceProvider::class,
-        App\Providers\BladeExtendsServiceProvider::class
+        App\Providers\BladeExtendsServiceProvider::class,
 
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
     ],
 
     /*
