@@ -180,6 +180,8 @@ return [
         App\Providers\BladeExtendsServiceProvider::class,
 
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        //jwt-auth
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class
     ],
 
     /*

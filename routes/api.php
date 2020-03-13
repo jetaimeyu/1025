@@ -22,3 +22,14 @@ Route::middleware('throttle:60,1')->prefix('v1')->group(function (){
    Route::get('article/{id}', 'Api\PostController@detail')->where(['id'=>'[1-9]{1}[0-9]*']);
 
 });
+
+
+
+Route::prefix('auth')->group(function($router) {
+    $router->post('login', 'AuthController@login');
+    $router->post('logout', 'AuthController@logout');
+});
+
+Route::middleware('refresh.token')->group(function($router) {
+    $router->get('profile','UserController@profile');
+});
