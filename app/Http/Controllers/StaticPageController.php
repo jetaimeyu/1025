@@ -10,6 +10,9 @@ class StaticPageController extends Controller
     public function index()
     {
         $time = time();
+$arr = [1,2,3];
+
+        dd(array_first($arr));
         return view('static_pages.home', compact('time'));
     }
 

@@ -9,8 +9,10 @@
             <div class="card-body">
                 @include('shared._errors')
                 <form method="POST" action="{{ route('users.update', $user->id )}}">
-                    {{ method_field('PATCH') }}
-                    {{ csrf_field() }}
+{{--                    {{ method_field('PATCH') }}--}}
+{{--                    {{ csrf_field() }}--}}
+                    @csrf
+                    @method('patch')
                     <div class="form-group">
                         <label for="name">名称：</label>
                         <input type="text" name="name" class="form-control" value="{{ $user->name }}">

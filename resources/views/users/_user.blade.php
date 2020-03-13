@@ -3,8 +3,10 @@
     <a href="{{route('users.show', $user)}}">{{$user->name}}</a>
     @can('destroy', $user)
         <form action="{{route('users.destroy', $user)}}" class="float-right" method="post">
-            {{csrf_field()}}
-            {{method_field('delete')}}
+{{--            {{csrf_field()}}--}}
+            @csrf
+            @method('delete')
+{{--            {{method_field('delete')}}--}}
             <button type="submit" class="btn btn-danger btn-sm delete-btn">删除</button>
         </form>
     @endcan
