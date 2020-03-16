@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->middleware(['auth']);
 
 Route::get('/', "StaticPageController@index")->name('home');
 Route::get('/help', 'StaticPageController@help')->name('help');
