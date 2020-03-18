@@ -16,6 +16,7 @@ Route::get('/', "StaticPageController@index")->name('home');
 Route::get('/help', 'StaticPageController@help')->name('help');
 Route::get('/about', 'StaticPageController@about')->name('about');
 Route::get('signup', 'UsersController@create')->name('signup');
+Route::post('/uploadTest', 'StaticPageController@upload')->name('uploadTest');
 Route::resource('users', 'UsersController');
 
 Route::get('login', 'SessionsController@create')->name('login');
